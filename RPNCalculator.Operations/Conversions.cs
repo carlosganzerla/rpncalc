@@ -8,6 +8,8 @@ namespace RPNCalculator.Operations
 {
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "deg2rad")]
+    [ExportMetadata(nameof(IOperationData.Description), "Convert degrees to radians")]
+
     public class DegToRadian : IOperation
     {
         public int Operands => 1;
@@ -19,6 +21,8 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "rad2deg")]
+    [ExportMetadata(nameof(IOperationData.Description), "Convert radians to degrees")]
+
     public class RadianToDeg : IOperation
     {
         public int Operands => 1;

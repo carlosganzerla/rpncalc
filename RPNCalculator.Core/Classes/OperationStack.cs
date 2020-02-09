@@ -58,5 +58,10 @@ namespace RPNCalculator.Core.Classes
             }
             return false;
         }
+
+        public void Clear()
+        {
+            inner.Clear();
+        }
     }
 }

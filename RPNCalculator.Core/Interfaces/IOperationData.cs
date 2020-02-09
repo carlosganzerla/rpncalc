@@ -7,5 +7,7 @@ namespace RPNCalculator.Core.Interfaces
     public interface IOperationData
     {
         string Symbol { get; }
+
+        string Description { get; }
     }
 }

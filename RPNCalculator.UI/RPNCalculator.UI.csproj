@@ -6,4 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RPNCalculator.Core\RPNCalculator.Core.csproj" />
+    <ProjectReference Include="..\RPNCalculator.Operations\RPNCalculator.Operations.csproj" />
+  </ItemGroup>
+
 </Project>

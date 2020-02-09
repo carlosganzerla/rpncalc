@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
+using System.Linq;
 using System.Reflection;
 
 namespace RPNCalculator.Core.Classes
@@ -12,6 +13,8 @@ namespace RPNCalculator.Core.Classes
         [ImportMany]
         private IEnumerable<Lazy<IOperation, IOperationData>> operations;
         private readonly CompositionContainer container;
+
+        public IEnumerable<IOperationData> AvailableOperations => operations.Select(x => x.Metadata);
 
         public OperationFactory()
         {

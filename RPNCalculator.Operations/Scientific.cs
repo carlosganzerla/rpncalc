@@ -6,6 +6,7 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "^")]
+    [ExportMetadata(nameof(IOperationData.Description), "Exponential")]
     public class Exp : IOperation
     {
         public int Operands => 2;
@@ -17,7 +18,7 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "inv")]
-
+    [ExportMetadata(nameof(IOperationData.Description), "Inverse of the number")]
     public class Invert : IOperation
     {
         public int Operands => 1;
@@ -29,6 +30,7 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "log")]
+    [ExportMetadata(nameof(IOperationData.Description), "User defined base logarithm")]
     public class Log : IOperation
     {
         public int Operands => 2;
@@ -40,6 +42,7 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "ln")]
+    [ExportMetadata(nameof(IOperationData.Description), "Natural base logarithm")]
     public class Ln : IOperation
     {
         public int Operands => 1;
@@ -51,6 +54,7 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "!")]
+    [ExportMetadata(nameof(IOperationData.Description), "Factorial")]
     public class Factorial : IOperation
     {
         public int Operands => 1;

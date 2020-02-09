@@ -6,6 +6,7 @@ namespace RPNCalculator.Operations
 {
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "pi")]
+    [ExportMetadata(nameof(IOperationData.Description), "Puts the PI constant in the stack")]
     public class Pi : IOperation
     {
         public int Operands => 0;
@@ -17,6 +18,8 @@ namespace RPNCalculator.Operations
 
     [Export(typeof(IOperation))]
     [ExportMetadata(nameof(IOperationData.Symbol), "e")]
+    [ExportMetadata(nameof(IOperationData.Description), "Puts the E constant in the stack")]
+
     public class E : IOperation
     {
         public int Operands => 0;
